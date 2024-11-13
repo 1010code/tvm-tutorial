@@ -1,0 +1,5 @@
+*.so
+.ipynb_checkpoints
+*.o
+*.c
+
