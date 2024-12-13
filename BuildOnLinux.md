@@ -100,7 +100,7 @@ cmake .. -G Ninja && ninja
 成功編譯後應該在 build 目錄下會看到 `libtvm.so` 和 `libtvm_runtime.so`。
 
 
-可以將編譯好的共享庫班一道系統路徑。
+可以將編譯好的共享庫搬移到系統路徑。
 ```sh
 sudo cp build/*.so /usr/local/lib/
 ```

@@ -1,0 +1,9 @@
+def @main(%float_input: Tensor[(1, 4), float32] /* ty=Tensor[(1, 4), float32] span=sequential/dense/MatMul.float_input:0:0 */) -> Tensor[(1, 3), float32] {
+  %0 = nn.dense(%float_input, meta[relay.Constant][0] /* ty=Tensor[(10, 4), float32] span=sequential/dense/MatMul:0:0 */, units=None, out_dtype="float32") /* ty=Tensor[(1, 10), float32] span=sequential/dense/MatMul:0:0 */;
+  %1 = add(%0, meta[relay.Constant][1] /* ty=Tensor[(10), float32] span=sequential/dense/BiasAdd.sequential/dense/BiasAdd/ReadVariableOp:0:0:0 */) /* ty=Tensor[(1, 10), float32] span=sequential/dense/BiasAdd:0:0 */;
+  %2 = nn.relu(%1) /* ty=Tensor[(1, 10), float32] span=sequential/dense/Relu:0:0 */;
+  %3 = nn.dense(%2, meta[relay.Constant][2] /* ty=Tensor[(3, 10), float32] span=sequential/dense_1/MatMul:0:0 */, units=None, out_dtype="float32") /* ty=Tensor[(1, 3), float32] span=sequential/dense_1/MatMul:0:0 */;
+  %4 = add(%3, meta[relay.Constant][3] /* ty=Tensor[(3), float32] span=sequential/dense_1/BiasAdd.sequential/dense_1/BiasAdd/ReadVariableOp:0:0:0 */) /* ty=Tensor[(1, 3), float32] span=sequential/dense_1/BiasAdd:0:0 */;
+  nn.softmax(%4, axis=1) /* ty=Tensor[(1, 3), float32] span=sequential/dense_1/Softmax:0:0 */
+}
+

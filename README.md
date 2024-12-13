@@ -25,5 +25,6 @@ pip install apache-tvm
 - [How to convert a network to GCC compilable C/C++ code? 提到BYOC](https://discuss.tvm.apache.org/t/how-to-convert-a-network-to-gcc-compilable-c-c-code/7846/6)
 - [microTVM：裸机上的 TVM](https://tvm.hyper.ai/docs/topic/microtvm/)
 - [microTVM 設計文檔](https://tvm.hyper.ai/docs/arch/arch/microtvm_design)
-
+- [TVM从零开始学深度学习编译器](http://giantpandacv.com/project/部署优化/深度学习编译器/【从零开始学深度学习编译器】一，深度学习编译器及TVM介绍/)
 - [TVM等神經編譯器概覽：它是連接深度學習框架和硬體的橋樑](https://posts.careerengine.us/p/6050781ceee8dc2d4b00faca)
+
